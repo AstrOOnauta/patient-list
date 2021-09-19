@@ -16,9 +16,9 @@ export default function TablePatient(props){
             </thead>
             <tbody style={{ fontSize: "14px" }}>
               {props.users.map((user, index) => {
-                if( props.search.toUpperCase() === user.name.first.toUpperCase() ||
-                    props.search.toUpperCase() === user.name.last.toUpperCase()  ||
-                    props.search.toUpperCase() === (user.name.first.toUpperCase()+" "+user.name.last.toUpperCase()) ||
+                if( props.search.toUpperCase() === (user.name.first+" "+user.name.last).toUpperCase().slice(0, props.search.length) ||
+                    props.search.toUpperCase() === user.name.first.toUpperCase().slice(0, props.search.length) ||
+                    props.search.toUpperCase() === user.name.last.toUpperCase().slice(0, props.search.length) ||
                     props.search.toUpperCase() === ""){
                       return(
                         <tr key={index}>
@@ -47,9 +47,9 @@ export default function TablePatient(props){
           <tbody style={{ fontSize: "14px" }}>
             {props.users.map((user, index) => {
               if(user.gender === "male"){
-                if( props.search.toUpperCase() === user.name.first.toUpperCase() ||
-                    props.search.toUpperCase() === user.name.last.toUpperCase()  ||
-                    props.search.toUpperCase() === (user.name.first.toUpperCase()+" "+user.name.last.toUpperCase()) ||
+                if( props.search.toUpperCase() === (user.name.first+" "+user.name.last).toUpperCase().slice(0, props.search.length) ||
+                    props.search.toUpperCase() === user.name.first.toUpperCase().slice(0, props.search.length) ||
+                    props.search.toUpperCase() === user.name.last.toUpperCase().slice(0, props.search.length) ||
                     props.search.toUpperCase() === ""){
                       return (
                         <>
@@ -83,9 +83,9 @@ export default function TablePatient(props){
           <tbody style={{ fontSize: "14px" }}>
             {props.users.map((user, index) => {
               if(user.gender === "female"){
-                if( props.search.toUpperCase() === user.name.first.toUpperCase() ||
-                    props.search.toUpperCase() === user.name.last.toUpperCase()  ||
-                    props.search.toUpperCase() === (user.name.first.toUpperCase()+" "+user.name.last.toUpperCase()) ||
+                if( props.search.toUpperCase() === (user.name.first+" "+user.name.last).toUpperCase().slice(0, props.search.length) ||
+                    props.search.toUpperCase() === user.name.first.toUpperCase().slice(0, props.search.length) ||
+                    props.search.toUpperCase() === user.name.last.toUpperCase().slice(0, props.search.length) ||
                     props.search.toUpperCase() === ""){
                       return (
                         <>
