@@ -40,32 +40,30 @@ function App() {
   }
 
   return (
-    <Router>
-      <Menu />  {/* Menu component */}
-      <Switch>
+      <Router>
+        <Menu />  {/* Menu component */}
+        <Switch>
 
-        {/* Home route content the patients list */}
-        <Route exact path="/">
-          <Container>
-            <Search search={search} setSearch={setSearch}/>
-            <Gender setGender={setGender} />
-            <TablePatient users={users} gender={gender} search={search}/>
-            <LoadingMore isLoading={isLoading} onClick={fetchData}/>
-          </Container>
-        </Route>
+          {/* Home route content the patients list */}
+          <Route exact path="/">
+            <Container>
+              <Search search={search} setSearch={setSearch}/>
+              <Gender setGender={setGender} />
+              <TablePatient users={users} gender={gender} search={search}/>
+              <LoadingMore isLoading={isLoading} onClick={fetchData}/>
+            </Container>
+          </Route>
 
-        {/* Route content the individual pacient info */}
-        <Route path="/paciente/:id">
-          <Patient patient={users}/>
-        </Route>
+          {/* Route content the individual pacient info */}
+          <Route path="/paciente/:id">
+            <Patient patient={users}/>
+          </Route>
 
-        {/* 404 error route*/}
-        <Route path="*">
-          <Error404 />
-        </Route>
+          {/* 404 error route*/}
+          <Route path="*" component={Error404} />
 
-      </Switch>
-    </Router>
+        </Switch>
+      </Router>
   )
 }
 

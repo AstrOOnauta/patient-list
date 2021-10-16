@@ -5,7 +5,7 @@ export default function TablePatient(props){
 
     if(props.gender==="all"){
       return(
-          <Table striped bordered hover responsive="sm" className="my-5 mx-auto text-center" style={{maxWidth: "90%"}}>
+          <Table striped bordered hover className="my-4 mx-auto text-center" style={{maxWidth: "90%"}}>
             <thead style={{ fontSize: "16px" }}>
               <tr>
                 <th>Nome</th>
@@ -35,7 +35,7 @@ export default function TablePatient(props){
       )
     }else if(props.gender==="male"){
       return(
-        <Table striped bordered hover responsive="sm" className="my-5 mx-auto text-center" style={{maxWidth: "90%"}}>
+        <Table striped bordered hover responsive="sm" className="my-4 mx-auto text-center" style={{maxWidth: "90%"}}>
           <thead style={{ fontSize: "16px" }}>
             <tr>
               <th>Nome</th>
@@ -71,7 +71,7 @@ export default function TablePatient(props){
     )
     }else if(props.gender==="female"){
       return(
-        <Table striped bordered hover responsive="sm" className="my-5 mx-auto text-center" style={{maxWidth: "90%"}}>
+        <Table striped bordered hover responsive="sm" className="my-4 mx-auto text-center" style={{maxWidth: "90%"}}>
           <thead style={{ fontSize: "16px" }}>
             <tr>
               <th>Nome</th>
