@@ -4,8 +4,9 @@ import { Container, Button } from "react-bootstrap"
 
 export default function Patient(props){
     const { id } = useParams()
+    console.log(props.patient.length)
 
-    if(props.patient.length === 0){
+    if(props.patient.length <= id){
         return(
             <h1 className="d-flex justify-content-center py-5 my-5">Carregando...</h1>
         )

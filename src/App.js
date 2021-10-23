@@ -56,7 +56,7 @@ function App() {
 
           {/* Route content the individual pacient info */}
           <Route path="/paciente/:id">
-            <Patient patient={users}/>
+            <Patient patient={users} pages={pages} setPages={setPages} fetchData={fetchData}/>
           </Route>
 
           {/* 404 error route*/}
